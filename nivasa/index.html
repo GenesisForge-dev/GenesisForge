@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nivasa – Home Expense Manager</title>
+<meta name="description" content="Nivasa: track money in and out, budgets, credit cards, groceries and family medicines in one private Android app. By Genesis Forge.">
+<meta property="og:title" content="Nivasa – Home Expense Manager">
+<meta property="og:description" content="Money, groceries, medicines and reminders for your home – private on your phone.">
+<style>
+  :root { --ink:#16241f; --muted:#5b6b64; --accent:#1e4d40; --accent2:#2b6152; --gold:#f2b544; --bg:#f6f7f4; --card:#ffffff; --line:#dfe5df; --hero-ink:#fff3da; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#e6ece8; --muted:#a3b2aa; --accent:#9cd1bf; --bg:#111513; --card:#1a201d; --line:#2c3531; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif; }
+  a { color:var(--accent); }
+  .hero { background:#1e4d40; color:var(--hero-ink); padding:48px 16px 56px; }
+  .wrap { max-width:960px; margin:0 auto; }
+  .hero .wrap { display:flex; gap:28px; align-items:center; flex-wrap:wrap; }
+  .hero svg { width:112px; height:112px; border-radius:28px; flex:none; box-shadow:0 8px 24px rgba(0,0,0,.25); }
+  .hero h1 { font-size:40px; margin:0; line-height:1.1; }
+  .hero p { margin:8px 0 0; font-size:19px; max-width:560px; opacity:.95; }
+  .btn { display:inline-block; margin-top:20px; background:#f2b544; color:#1b1b1b; text-decoration:none; font-weight:700; padding:12px 22px; border-radius:999px; }
+  .btn:hover { filter:brightness(1.05); }
+  .note { font-size:13px; opacity:.8; margin-top:8px; }
+  section { padding:40px 16px 8px; }
+  h2 { font-size:26px; margin:0 0 18px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:18px; }
+  .card h3 { margin:10px 0 6px; font-size:18px; }
+  .card p, .card li { color:var(--muted); margin:0; }
+  .card ul { padding-left:18px; margin:0; }
+  .tile { width:44px; height:44px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; font-weight:700; color:#1e4d40; }
+  .t1 { background:#f2b544; } .t2 { background:#8bc34a; } .t3 { background:#ef6b6b; color:#fff; } .t4 { background:#64b5f6; color:#fff; } .t5 { background:#cde8dd; } .t6 { background:#fbe7c6; }
+  .privacy { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:22px; display:grid; gap:10px; }
+  .privacy div { display:flex; gap:10px; align-items:flex-start; }
+  .apps { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+  .app { display:flex; gap:14px; align-items:center; text-decoration:none; color:inherit; }
+  .app .badge { width:52px; height:52px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:26px; flex:none; }
+  footer { padding:40px 16px 48px; color:var(--muted); font-size:14px; }
+  footer .wrap { border-top:1px solid var(--line); padding-top:18px; display:flex; gap:16px; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="wrap">
+    <svg viewBox="0 0 108 108" role="img" aria-label="Nivasa icon">
+      <rect width="108" height="108" fill="#1E4D40"/>
+      <g transform="translate(54 55) scale(1.3) translate(-54 -55)">
+        <path d="M29.5,50 L54,29.5 L78.5,50" fill="none" stroke="#FFF3DA" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="33" y="49" width="20" height="15" rx="3.8" fill="#F2B544"/>
+        <rect x="55" y="49" width="20" height="15" rx="3.8" fill="#8BC34A"/>
+        <rect x="33" y="66" width="20" height="15" rx="3.8" fill="#EF6B6B"/>
+        <rect x="55" y="66" width="20" height="15" rx="3.8" fill="#64B5F6"/>
+        <path d="M39.2,51.1 H46.8 M39.2,53.9 H46.8 M39.2,51.1 H41.65 C43.99,51.1 45.07,52.36 45.07,53.89 C45.07,55.51 43.72,56.68 41.65,56.68 H39.65 L45.05,61.9" fill="none" stroke="#1E4D40" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M59.5,61.2 C59.5,55.4 62.6,52.9 70.5,52.2 C70.5,58.2 67.3,61.2 59.5,61.2 Z" fill="#1E4D40"/>
+        <g transform="rotate(-35 43 73.5)"><rect x="36.5" y="70.3" width="13" height="6.4" rx="3.2" fill="#FFFFFF"/></g>
+        <path d="M65,68.8 C67.4,68.8 69,70.6 69,73 V76.2 L70.7,78 H59.3 L61,76.2 V73 C61,70.6 62.6,68.8 65,68.8 Z M63.6,79.2 H66.4 A1.4,1.4 0 0 1 63.6,79.2 Z" fill="#FFFFFF"/>
+      </g>
+    </svg>
+    <div>
+      <h1>Nivasa</h1>
+      <p>Your home's money, groceries, medicines and reminders in one place – private on your phone.</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=in.genesisforge.nivasa">Get it on Google Play</a>
+      <div class="note">Free · Android · English · Voice entry in English, Telugu and Hindi</div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Everything your home runs on</h2>
+    <div class="grid">
+      <div class="card"><div class="tile t1">₹</div><h3>Money in and out</h3>
+        <p>Every expense and every rupee received, by category and account. Monthly budget with "₹ left per day". Speak "milk 60" or scan a shop bill.</p></div>
+      <div class="card"><div class="tile t5">💳</div><h3>Accounts and credit cards</h3>
+        <p>Cash, bank, wallets and cards with live balances. See each card's available limit and outstanding, and get reminded before the due date.</p></div>
+      <div class="card"><div class="tile t2">🌿</div><h3>Grocery stock and prices</h3>
+        <p>One tap saves stock, price per kg and the expense. Know when rice runs out, which shop is cheapest, and how much more your basket costs now.</p></div>
+      <div class="card"><div class="tile t3">💊</div><h3>Family medicines</h3>
+        <p>Dose reminders with Taken / Skip on the notification, refill and expiry alerts, and medical spending per person for insurance and tax.</p></div>
+      <div class="card"><div class="tile t4">🔔</div><h3>Subscriptions and bills</h3>
+        <p>OTT, EMIs, SIPs, premiums, rent and electricity. Auto-debits are booked by themselves; Nivasa even spots regular payments for you.</p></div>
+      <div class="card"><div class="tile t6">✨</div><h3>Smart insights</h3>
+        <p>Month-end forecast, "higher than usual" alerts and categories that learn your shops – all worked out on the phone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Private by design</h2>
+    <div class="privacy">
+      <div>🔒 <span>No sign-up and no server: your entries stay in the app's private storage on your phone.</span></div>
+      <div>🩺 <span>Medicine and money details are never shared with anyone, and there are no ads on the Medicine screens.</span></div>
+      <div>👆 <span>Optional app lock with your fingerprint, face or phone PIN.</span></div>
+      <div>💾 <span>Back up to a file you keep (Google Drive, WhatsApp to yourself) and restore it on a new phone.</span></div>
+      <div>📄 <span>Read the full <a href="privacy.html">privacy policy</a>.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>More from Genesis Forge</h2>
+    <div class="apps">
+      <a class="card app" href="https://play.google.com/store/apps/details?id=in.genesisforge.kinvale">
+        <div class="badge" style="background:#3e6b4f">🌳</div>
+        <div><strong>Kinvale</strong><br><span style="color:var(--muted)">Your family tree – birthdays, anniversaries and memories, private on your phone.</span></div>
+      </a>
+      <a class="card app" href="https://play.google.com/store/apps/details?id=in.genesisforge.shubhavela">
+        <div class="badge" style="background:#b5651d">🪔</div>
+        <div><strong>Shubhavela</strong><br><span style="color:var(--muted)">Telugu &amp; English greeting pictures for every festival and good morning.</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Genesis Forge</span>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:genesisforge.dev@gmail.com">genesisforge.dev@gmail.com</a>
+    <a href="../">genesisforge.in</a>
+  </div>
+</footer>
+</body>
+</html>
